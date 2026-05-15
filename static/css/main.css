@@ -114,10 +114,21 @@ em { font-style: italic; color: var(--primary); font-weight: 500; }
   margin-bottom: 0.9rem;
 }
 
-p { margin-bottom: 1rem; color: var(--text-muted); }
+p {
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 p:last-child { margin-bottom: 0; }
 
-ul, ol { padding-left: 1.4rem; margin-bottom: 1rem; color: var(--text-muted); }
+ul, ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 li { margin-bottom: 0.4rem; }
 li::marker { color: var(--primary); }
 
@@ -633,6 +644,13 @@ nav a.nav-cta:hover {
   position: relative;
   z-index: 1;
   flex: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.review-text * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .review-author {
   display: flex;
