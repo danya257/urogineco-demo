@@ -623,6 +623,14 @@ nav a.nav-cta:hover {
   transition: all 0.3s var(--ease);
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.review-card * {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .review-card:hover { box-shadow: var(--shadow-md); border-color: var(--border-strong); }
 .review-card::before {
