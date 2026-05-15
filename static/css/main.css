@@ -51,7 +51,7 @@
 /* Reset */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 body {
   font-family: var(--sans);
   background: var(--bg);
@@ -91,10 +91,14 @@ h1, h2, h3, h4, h5 {
   color: var(--text);
   line-height: 1.18;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
-h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 500; letter-spacing: -0.02em; }
-h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); margin-bottom: 1.2rem; }
-h3 { font-size: clamp(1.2rem, 1.8vw, 1.45rem); font-weight: 600; margin-bottom: 0.6rem; color: var(--text); }
+h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 500; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.7rem, 3.3vw, 2.6rem); margin-bottom: 1.2rem; }
+h3 { font-size: clamp(1.15rem, 1.7vw, 1.4rem); font-weight: 600; margin-bottom: 0.6rem; color: var(--text); }
 h4 { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
 
 em { font-style: italic; color: var(--primary); font-weight: 500; }
@@ -1028,6 +1032,8 @@ footer .footer-tag {
   .container { padding: 0 1.2rem; }
   .hero-cta .btn { width: 100%; }
   .review-card::before { display: none; }
+  h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  h2 { font-size: clamp(1.5rem, 6.5vw, 2rem); }
 }
 
 /* Reduced motion */
